@@ -8,7 +8,7 @@ use Events;
 class Controller extends Package {
     protected $pkgHandle = 'snipcart_callback';
     protected $appVersionRequired = '5.7.3';
-    protected $pkgVersion = '0.9.5';
+    protected $pkgVersion = '0.9.6';
 
     public function getPackageDescription() {
         return t("A package to handle Snipcart callbacks");
@@ -40,7 +40,7 @@ class Controller extends Package {
     }
 
     public function on_start() {
-        $listener = Core::make('\Concrete\Package\SnipcartCallback\Models\Order');
+        $listener = Core::make('\Concrete\Package\SnipcartCallback\Src\Event\Order');
         Events::addListener('on_snipcart_callback', array($listener, 'orderPlaced'));
     }
 

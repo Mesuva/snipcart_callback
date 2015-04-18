@@ -1,5 +1,5 @@
 <?php
-namespace Concrete\Package\SnipcartCallback\Models;
+namespace Concrete\Package\SnipcartCallback\Src\Event;
 
 use Log;
 
